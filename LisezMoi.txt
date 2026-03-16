@@ -1,0 +1,13 @@
+------------------------------------------------------------------------
+INSTRUCTIONS DE COMPILATION & LANCELENT
+------------------------------------------------------------------------
+
+>>> SOUS WINDOWS :
+1. Double-cliquez sur le fichier 'compile.bat' situé à la racine.
+2. Le jeu se compilera et se lancera automatiquement.
+
+>>> SOUS LINUX / MACOS :
+1. Ouvrez un terminal dans le dossier du projet.
+2. Tapez la commande : make
+3. Lancez le jeu avec : ./bin/DungeonBattle
+
