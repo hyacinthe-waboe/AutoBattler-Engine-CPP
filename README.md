@@ -21,15 +21,22 @@ Assurez-vous d'avoir un compilateur C++ (comme g++) et l'utilitaire Make install
 
 **2. Compilation :**
 Placez-vous dans le dossier racine du projet depuis votre terminal, puis tapez la commande suivante :
-"make"
+
+```bash 
+make
+```
 
 **3. Lancement de la simulation :**
 Une fois le projet compilé, exécutez le programme avec la commande :
-"./nom_de_ton_executable" *(N'oublie pas de remplacer par le vrai nom de ton fichier de sortie !)*
+```bash 
+./bin/DungeonBattle
+```
 
 **4. Nettoyage :**
 Pour supprimer les fichiers objets générés lors de la compilation, utilisez :
-"make clean"
+```bash 
+make clean
+``` 
 
 ## 👨‍💻 Auteur
 **Hyacinthe WABOE** - Étudiant en L3 MIASHS (Ingénierie logicielle et Data Science)
