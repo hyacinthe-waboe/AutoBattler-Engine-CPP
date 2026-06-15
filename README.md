@@ -1,42 +1,77 @@
-# ⚔️ Auto-Battler Engine (C++)
+# Auto-Battler Engine C++
 
-## 📖 À propos du projet
-Ce projet a été développé dans le cadre du module d'algorithmique avancée de ma 3ème année de Licence MIASHS à l'Université Toulouse - Jean Jaurès. 
-Il s'agit d'un simulateur de combats autonomes (Auto-Battler) développé entièrement en C++. L'objectif principal de ce projet était de concevoir une architecture logicielle modulaire et de maîtriser les concepts complexes de la gestion mémoire.
+Moteur de combats automatiques développé en C++ dans le cadre de la Licence 3 MIASHS à l'Université Toulouse - Jean Jaurès.
 
-## ⚙️ Concepts techniques abordés
-- **Programmation Orientée Objet (POO) Avancée :** Utilisation de l'héritage, du polymorphisme et des classes abstraites pour définir les différentes entités du jeu (personnages, classes, etc.).
-- **Design Pattern :** Implémentation du patron de conception *Factory* pour la génération dynamique des combattants.
-- **Gestion de la mémoire :** Allocation dynamique sécurisée, manipulation de pointeurs et création de destructeurs personnalisés pour éviter les fuites de mémoire.
-- **Automatisation :** Structuration de la compilation via un outil externe.
+Le programme génère quatre équipes de trois héros, simule deux demi-finales puis une finale, et affiche le déroulement complet du tournoi dans le terminal.
 
-## 🛠️ Architecture simplifiée
-Le code est structuré de manière à séparer la logique du moteur de jeu et les entités. 
-Les personnages héritent tous d'une classe de base virtuelle, ce qui permet au système de combat de gérer n'importe quel type de combattant de manière générique grâce au polymorphisme.
+## Fonctionnalités
 
-## 🚀 Installation et Exécution
+- génération aléatoire des équipes avec une Factory ;
+- six classes jouables : Guerrier, Mage, Archer, Paladin, Assassin et Druide ;
+- statistiques propres à chaque classe : points de vie, attaque, défense et vitesse ;
+- capacités spécialisées selon le héros ;
+- objets aléatoires améliorant l'attaque, la défense ou la vitesse ;
+- initiative calculée à partir de la vitesse ;
+- récupération des héros entre les combats ;
+- tournoi automatisé à quatre joueurs.
 
-**1. Prérequis :**
-Assurez-vous d'avoir un compilateur C++ (comme g++) et l'utilitaire Make installés sur votre machine.
+## Concepts mis en pratique
 
-**2. Compilation :**
-Placez-vous dans le dossier racine du projet depuis votre terminal, puis tapez la commande suivante :
+- programmation orientée objet ;
+- héritage, classes abstraites et polymorphisme ;
+- patron de conception Factory ;
+- allocation dynamique, pointeurs et destructeurs ;
+- séparation entre les interfaces dans `include/` et les implémentations dans `src/`.
 
-```bash 
-make
+## Structure
+
+```text
+.
+├── include/          # Fichiers d'en-tête des héros et du moteur
+├── src/              # Implémentations et point d'entrée
+├── Compile.bat       # Compilation et lancement sous Windows
+├── Makefile          # Compilation sous Linux/macOS
+└── Rapports_Projet.pdf
 ```
 
-**3. Lancement de la simulation :**
-Une fois le projet compilé, exécutez le programme avec la commande :
-```bash 
+## Lancer le projet
+
+### Windows
+
+Avec `g++` installé et disponible dans le `PATH` :
+
+```powershell
+.\Compile.bat
+```
+
+### Linux ou macOS
+
+```bash
+make run
+```
+
+Pour compiler sans lancer le tournoi :
+
+```bash
+make
 ./bin/DungeonBattle
 ```
 
-**4. Nettoyage :**
-Pour supprimer les fichiers objets générés lors de la compilation, utilisez :
-```bash 
-make clean
-``` 
+Pour supprimer l'exécutable généré :
 
-## 👨‍💻 Auteur
-**Hyacinthe WABOE** - Étudiant en L3 MIASHS (Ingénierie logicielle et Data Science)
+```bash
+make clean
+```
+
+## Limites actuelles
+
+- le tournoi se joue uniquement dans le terminal ;
+- les équipes et les objets sont générés aléatoirement ;
+- aucune sauvegarde de partie n'est prévue ;
+- le dépôt ne contient pas encore de tests automatisés.
+
+## Auteur
+
+**Hyacinthe Waboe**
+
+Projet universitaire de Licence 3 MIASHS.
