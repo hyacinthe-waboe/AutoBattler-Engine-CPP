@@ -1,29 +1,43 @@
-# Auto-Battler Engine C++
+<h1 align="center">⚔️ Auto-Battler Engine C++</h1>
 
-Moteur de combats automatiques développé en C++ dans le cadre de la Licence 3 MIASHS à l'Université Toulouse - Jean Jaurès.
+<p align="center">
+  <strong>Des héros, des équipements et un tournoi entièrement automatisé.</strong>
+</p>
 
-Le programme génère quatre équipes de trois héros, simule deux demi-finales puis une finale, et affiche le déroulement complet du tournoi dans le terminal.
+<p align="center">
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++">
+  <img src="https://img.shields.io/badge/POO-Polymorphisme-6C63FF?style=for-the-badge" alt="POO">
+  <img src="https://img.shields.io/badge/Design_Pattern-Factory-EF8354?style=for-the-badge" alt="Factory">
+</p>
 
-## Fonctionnalités
+## 🎮 Le projet
 
-- génération aléatoire des équipes avec une Factory ;
-- six classes jouables : Guerrier, Mage, Archer, Paladin, Assassin et Druide ;
-- statistiques propres à chaque classe : points de vie, attaque, défense et vitesse ;
-- capacités spécialisées selon le héros ;
-- objets aléatoires améliorant l'attaque, la défense ou la vitesse ;
-- initiative calculée à partir de la vitesse ;
-- récupération des héros entre les combats ;
-- tournoi automatisé à quatre joueurs.
+Ce moteur de combats automatiques a été développé pendant ma **Licence 3 MIASHS** à l'Université Toulouse - Jean Jaurès.
 
-## Concepts mis en pratique
+À chaque lancement, le programme crée quatre équipes de trois héros, organise les demi-finales puis la grande finale et raconte tout le tournoi dans le terminal. Les statistiques, les classes et les équipements rendent chaque simulation différente.
 
-- programmation orientée objet ;
-- héritage, classes abstraites et polymorphisme ;
-- patron de conception Factory ;
-- allocation dynamique, pointeurs et destructeurs ;
-- séparation entre les interfaces dans `include/` et les implémentations dans `src/`.
+## ✨ Ce que le moteur sait faire
 
-## Structure
+- 🎲 générer automatiquement quatre équipes ;
+- 🧙 créer six classes : Guerrier, Mage, Archer, Paladin, Assassin et Druide ;
+- 📊 attribuer des points de vie, d'attaque, de défense et de vitesse ;
+- 💥 appliquer les capacités propres à chaque classe ;
+- 🗡️ distribuer aléatoirement des objets améliorant les héros ;
+- ⚡ calculer l'initiative à partir de la vitesse ;
+- ❤️ soigner les survivants entre les rencontres ;
+- 🏆 jouer un tournoi complet jusqu'au champion final.
+
+## 🧠 Ce que j'ai travaillé
+
+| Notion | Mise en pratique |
+|---|---|
+| **POO** | Classe abstraite commune et spécialisations de héros |
+| **Polymorphisme** | Gestion générique des différents combattants |
+| **Factory** | Création dynamique et aléatoire des héros |
+| **Mémoire** | Pointeurs, allocation dynamique et destructeurs |
+| **Organisation** | Interfaces dans `include/`, implémentations dans `src/` |
+
+## 📂 Organisation
 
 ```text
 .
@@ -34,11 +48,11 @@ Le programme génère quatre équipes de trois héros, simule deux demi-finales 
 └── Rapports_Projet.pdf
 ```
 
-## Lancer le projet
+## 🚀 Lancer le tournoi
 
 ### Windows
 
-Avec `g++` installé et disponible dans le `PATH` :
+Avec `g++` disponible dans le `PATH` :
 
 ```powershell
 .\Compile.bat
@@ -50,28 +64,27 @@ Avec `g++` installé et disponible dans le `PATH` :
 make run
 ```
 
-Pour compiler sans lancer le tournoi :
+Compilation et lancement séparés :
 
 ```bash
 make
 ./bin/DungeonBattle
 ```
 
-Pour supprimer l'exécutable généré :
+Nettoyage :
 
 ```bash
 make clean
 ```
 
-## Limites actuelles
+## 🚧 Limites actuelles
 
 - le tournoi se joue uniquement dans le terminal ;
-- les équipes et les objets sont générés aléatoirement ;
+- les équipes ne peuvent pas encore être composées manuellement ;
 - aucune sauvegarde de partie n'est prévue ;
 - le dépôt ne contient pas encore de tests automatisés.
 
-## Auteur
+## 👨‍💻 Auteur
 
-**Hyacinthe Waboe**
-
+**Hyacinthe Waboe**<br>
 Projet universitaire de Licence 3 MIASHS.
